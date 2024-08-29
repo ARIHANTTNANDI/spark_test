@@ -1,12 +1,12 @@
 name := "spark-essentials"
 
-version := "0.2"
+version := "0.1"
 
-scalaVersion := "2.13.12"
+scalaVersion := "2.12.10"
 
-val sparkVersion = "3.5.0"
-val postgresVersion = "42.6.0"
-val log4jVersion = "2.20.0"
+val sparkVersion = "3.0.2"
+val vegasVersion = "0.3.11"
+val postgresVersion = "42.2.2"
 
 resolvers ++= Seq(
   "bintray-spark-packages" at "https://dl.bintray.com/spark-packages/maven",
@@ -16,11 +16,8 @@ resolvers ++= Seq(
 
 
 libraryDependencies ++= Seq(
-  "org.apache.spark" %% "spark-core" % sparkVersion,
-  "org.apache.spark" %% "spark-sql" % sparkVersion,
-  // logging
-  "org.apache.logging.log4j" % "log4j-api" % log4jVersion,
-  "org.apache.logging.log4j" % "log4j-core" % log4jVersion,
+  "org.apache.spark" %% "spark-core" % "3.3.0",
+  "org.apache.spark" %% "spark-sql" % "3.3.0",
   // postgres for DB connectivity
-  "org.postgresql" % "postgresql" % postgresVersion
+
 )
